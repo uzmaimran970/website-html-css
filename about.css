@@ -1,0 +1,180 @@
+/* Global Reset */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Body Styles */
+body {
+    background: url('images/kids toy img.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-family: sans-serif, Poppins;
+}
+
+/* Navbar */
+.manu_bar {
+    background-color: #c70039;
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    position: relative;
+}
+
+.logo {
+    color: white;
+    font-size: 30px;
+}
+
+.logo span {
+    color: black;
+}
+
+/* Navbar Menu */
+.manu_bar ul {
+    list-style: none;
+    display: flex;
+    margin: 0; /* Remove margin to avoid unwanted space */
+    padding: 0;
+}
+
+.manu_bar ul li {
+    padding: 10px 30px;
+    position: relative;
+}
+
+.manu_bar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.3s ease;
+}
+
+.manu_bar ul li a:hover {
+    color: blue;
+}
+
+/* Wrapper */
+.wrapper {
+    width: 100%;
+    height: 100vh;
+    background-color: palevioletred;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Kids Store */
+.kidsstore {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 20px;
+    list-style: none;
+}
+
+.kidsstore li {
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15), -6px -6px 10px -1px rgba(255,255,255,0.7);
+    padding: 12px;
+    border-radius: 7px;
+    font-size: 17px;
+    margin-bottom: 10px;
+}
+
+.kidsstore li label {
+    padding: 12px;
+    color: #c20000;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.answer {
+    height: 0;
+    overflow: hidden;
+}
+
+.kidsstore li label::after {
+    content: '+';
+    font-size: 23px;
+}
+
+/* Expand the answer when radio is checked */
+.radio:checked ~ .answer {
+    height: 110px;
+}
+
+/* Heading Styles */
+h1 {
+    color: white;
+    border: 2px solid #c70039;
+    text-align: center;
+    background-color: #c70039;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* Tablet and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .manu_bar {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 0 3%; /* Reduced padding for better fit */
+    }
+
+    .manu_bar ul {
+        flex-direction: column;
+        width: 100%;
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .manu_bar ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .manu_bar ul li a {
+        font-size: 18px;
+    }
+
+    .kidsstore {
+        max-width: 90%;
+        padding: 0 10px;
+    }
+
+    .kidsstore li {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 1.5em;
+    }
+}
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+    .manu_bar {
+        padding: 0 2%;
+    }
+
+    .manu_bar ul {
+        flex-direction: column;
+    }
+
+    .kidsstore li {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 1.2em;
+    }
+}
